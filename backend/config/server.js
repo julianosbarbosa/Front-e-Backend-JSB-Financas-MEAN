@@ -10,3 +10,5 @@ server.use(bodyParser.json()) //faz um tratamento expecifico p json
 server.listen(port, function(){
     console.log(`Sevidor ligado na porta ${port}.`)// servidor escutando a porta
 })
+
+module.exports=server
