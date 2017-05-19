@@ -6,5 +6,8 @@ module.exports= function (server){ //server esta vindo de loader.js
 
     const billingCycleService = require('../api/billingCycle/billingCycleService')
     billingCycleService.register(router,'/billingCycle') // a url fica /api//billingCycle que faz 'get','post', 'put', 'delete'
+    const billingSummaryService = require('../api/billingSummary/billingSummaryService')
+    router.route('/billingSummary').get(billingSummaryService.getSummary) //vai ser chamado billingSummaryService e mapeado na rota
+
 }
 
