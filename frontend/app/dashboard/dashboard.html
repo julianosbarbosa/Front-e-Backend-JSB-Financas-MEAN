@@ -1,1 +1,8 @@
-<h1>Painel de controle</h1>
+<!--componente reindeizando template e bindings -->
+<content-header name="Painel de Controle" small="Finanças Pessoais"></content-header>
+
+<section class="content" ng-controller="DashboardCtrl as dashboard">
+    <value-box grid="12 12 4 4" color-class="bg-green" icon-class="fa fa-bank" value="R$ {{ dashboard.credit | number:2 }}" text="Total de Céditos"></value-box>
+    <value-box grid="12 12 4 4" color-class="bg-red" icon-class="fa fa-credit-card" value="R$ {{ dashboard.debt | number:2 }}" text="Total de Déditos"></value-box>
+    <value-box grid="12 12 4 4" color-class="bg-blue" icon-class="fa fa-money" value="R$ {{ dashboard.total | number:2 }}" text="Valor em Carteira"></value-box>
+</section>
